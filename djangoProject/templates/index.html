@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <title>Форма Django</title>
+    <link  src="main.css">
+</head>
+<body>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <h3>GET IN TOUCH</h3>
+
+            {{ form }}
+
+        <input class="button" type="submit" value="Send" >
+    </form>
+</div>
+
+</body>
+</html>
